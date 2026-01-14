@@ -24,6 +24,10 @@ function subtracao(){
 function divisao(){
     var numero7 = parseFloat(document.getElementById("n7").value)
     var numero8 = parseFloat(document.getElementById("n8").value)
-    var resp4 = document.getElementById("resposta4")
-    resp4.textContent = numero7 / numero8
+
+    if (numero8 !== 0){
+    document.getElementById("resposta4").innerHTML = (numero7 / numero8).toFixed(2)
+    } else {
+        document.getElementById("resposta4").innerHTML = "Erro: Não há divisão por zero, escolha outro número."
+    }
 }
